@@ -1,0 +1,11 @@
+# Analysis methods
+- Regression
+  - Zero-crossing rate evaluation
+  - Least squares fit: Levenberg-Marquardt
+  - Least squares fit: Trust region dogleg
+- Spectral peak search
+  - Raw FFT
+  - Zero-padded FFT
+- Autocorrelation-type
+  - Raw autocorrelation
+  - Average square difference function (ASDF)
