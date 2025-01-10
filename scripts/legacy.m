@@ -226,7 +226,7 @@ for i = 1:51
 
     % Fourier 16x padding
     fftN = 16*2.^nextpow2(subN);
-    [maxVal4, maxInd] = max(abs(fft(eqY,fftN)));
+    [maxVal4, maxInd] = max(abs(fft(eqY ,fftN)));
     fft4_freq = maxInd / fftN * fs;
     fft4_dist = fft4_freq * freq2dist * 1000;
     fft4_dists(i) = fft4_dist;
