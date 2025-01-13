@@ -12,4 +12,4 @@ populate.do()
 diagram.do()
 
 # 4. Run GUI app
-app.app.run(debug=True)
+app.app.run()
