@@ -4,21 +4,37 @@
 
 Вейвформы подлежат спектральной фильтрации и нормировке для дальнейшего определения фундаментальной частоты, которая прямо пропорциональна дистанции, детектируемой прибором.
 
+## Структура пайплайна
+
+База данных MySQL на основе DataJoint:
+
+- Таблица метаданных эксперимента
+- Таблица данных вейвформ
+- Таблица результатов предобработки
+- Таблица результатов фиттинга частоты по МНК
+
+![db](/images/db-structure.png)
+
+Flask-интерфейс на основе Plotly Dash
+
+- Вкладка дашборда с графиком частоты
+
+![dashboard](/images/dash-gui/dashboard.png)
+
+- Вкладка загрузки вейвформы с превью
+
+![upload](/images/dash-gui/upload.png)
+
 ## Пример вейвформы до и после обработки
 
 ![raw](/images/preprocessing/raw.png) ![processed](/images/preprocessing/normalized.png)
 > 📝 **Note:** Конкретные этапы предобработки описаны [здесь](/images/preprocessing/note.md)
 
-## Вычисление дистанции по фундаментальной частоте
+## Extra: Вычисление дистанции по фундаментальной частоте
 
 - Регрессионными методами:
-<br>![lsq](/images/analysis/lsq.png)<br>
+![lsq](/images/analysis/lsq.png)
 - Спектральными методами:
-<br>![fft](/images/analysis/fft.png)<br>
+![fft](/images/analysis/fft.png)
 - Автокорреляционными методами:
-<br>![acr](/images/analysis/acr.png)<br>
-
-## TODO
-
-1. GUI для ввода данных (```DataJoint LabBook```)
-2. Дашборд (```DataJoint SciViz```)
+![acr](/images/analysis/acr.png)

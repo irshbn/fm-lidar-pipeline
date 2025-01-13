@@ -2,9 +2,7 @@ import datajoint as dj
 from .preconditioning import precondition
 from .processing import lsq_cosine_fit
 
-
 schema = dj.Schema(f"{dj.config['database.user']}_schema")
-
 
 @schema
 class Experiment(dj.Manual):
@@ -55,7 +53,7 @@ class WaveformPreconditioned(dj.Computed):
 class LeastSquaresFit(dj.Computed):
     definition = """
     # Computed LIDAR beat frequency and fit quality parameters.
-    -> Waveform
+    -> WaveformPreconditioned
     ---
     lsq_frequency	: float	# Beat frequency (Hz)
     lsq_sigma		: float	# Frequency standard deviation (Hz)

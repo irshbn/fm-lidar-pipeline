@@ -7,7 +7,7 @@
     "connection.init_function": null,
     "connection.charset": "",
     "loglevel": "INFO",
-    "safemode": true,
+    "safemode": false,
     "fetch_format": "array",
     "display.limit": 12,
     "display.width": 14,
